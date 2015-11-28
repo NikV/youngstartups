@@ -25,7 +25,11 @@ be the main selling point to Young Startups).
 
 ## Design
 
-Paul is working on designing up some mockups right now.
+User Timeline (Dashboard)
+![](https://github.com/digitaldawn/youngstartups/blob/master/design/youngstartups-timeline.png)
+
+User Profile (Click on member on timeline to get to it)
+![](https://github.com/digitaldawn/youngstartups/blob/master/design/youngstartups-userprofile.png)
 
 ## Development
 
