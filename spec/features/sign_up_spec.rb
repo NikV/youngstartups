@@ -21,6 +21,8 @@ feature 'sign up' do
     fill_in "Password", with: "password"
     click_button "Request Invite"
     expect(page).to have_content "Your request to join has been received"
+
+    expect(User.last.accepted?).to eq false
   end
 
 end
