@@ -14,6 +14,10 @@ class UsersController < ApplicationController
     end
   end
 
+  def show
+    @user = User.friendly.find(params[:id])
+  end
+
 private
   def permitted_params
     params.require(:user).permit(:email, :password, :date_of_birth, 
