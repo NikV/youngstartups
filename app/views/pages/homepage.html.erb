@@ -1,9 +1,11 @@
-<% content_for(:nav_classes){ 'nav--has-bottom' } %>
+<% content_for(:heading_classes){ 'heading--has-bottom' } %>
+<% content_for :heading do %>
+  <h1>Homepage</h1>
+<% end %>
 
 <div class="wrapper">
   <div class="base-half base-half--centered">
 
-    <h1>Homepage</h1>
     <%= link_to "Request Invite", new_user_path %>
     <%= link_to "Login", login_path %>
 

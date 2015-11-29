@@ -1,0 +1,12 @@
+<h3>Directory Members</h3>
+<ul class="directory-list">
+  <% @users.accepted.each do |user| %>
+    <li>
+      <%= link_to user_path(user) do %>
+        <%= image_tag gravatar(user.email, 40), class: 'directory-gravatar' %>
+        <%= user.name.try(:titleize) %>
+        <small><%= user.tagline %></small>
+      <% end %>
+    </li>
+  <% end %>
+</ul>

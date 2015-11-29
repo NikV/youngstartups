@@ -1,7 +1,11 @@
 <% content_for(:body_classes){ 'body--directory' } %>
 
 <% content_for :heading do %>
-  <h1><%= @user.name.try(:titleize) %><small><%= @user.tagline %></small></h1>
+  <%= image_tag gravatar(@user.email), class: 'heading--image' %>
+  <% if current_user == @user %>
+    <%= link_to "Edit Profile", edit_user_path(@user), class: 'heading--button' %>
+  <% end %>
+  <h1><%= @user.name.try(:titleize) %> <small><%= @user.tagline %></small></h1>
   <%= simple_format(@user.bio) if @user.bio.present? %>
 <% end %>
 

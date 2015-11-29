@@ -3,6 +3,10 @@ class UsersController < ApplicationController
   def new
     @user = User.new
   end
+  
+  def edit
+    @user = User.friendly.find(params[:id])
+  end
 
   def create
     @user = User.new(permitted_params)
@@ -11,6 +15,16 @@ class UsersController < ApplicationController
       redirect_to root_path
     else
       render :new
+    end
+  end
+
+  def update
+    @user = User.friendly.find(params[:id])
+    if @user.update_attributes(permitted_params)
+      flash[:notice] = "Your profile has been updated"
+      redirect_to edit_user_path(@user)
+    else
+      render :edit
     end
   end
 

@@ -25,6 +25,7 @@
         <li><%= link_to "Showcase", showcase_path %></li>
         <li><%= link_to "Podcast", podcast_path %></li>
         <% if current_user.present? %>
+            <li><%= link_to "Profile", user_path(current_user) %></li>
           <% if current_user.admin? %>
             <li><%= link_to "Admin", admin_users_path %></li>
           <% end %>
@@ -37,7 +38,8 @@
   </nav>
 
   <% if content_for?(:heading) %>
-    <header id="header">
+    <header id="header" 
+            class="<%= content_for?(:heading_classes) ? yield(:heading_classes) : "" %>">
       <div class="wrapper">
         <%= yield(:heading) %>
       </div>

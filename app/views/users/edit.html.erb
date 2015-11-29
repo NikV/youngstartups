@@ -1,0 +1,27 @@
+<% content_for(:heading_classes){ 'nav--has-bottom' } %>
+<% content_for :heading do %>
+  <h1>Editing Profile</h1>
+<% end %>
+
+
+<div class="wrapper">
+  <div class="base-half base-half--centered">
+    <h1>Edit Profile</h1>
+
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :name, required: true, label: "Name" %>
+      <%= f.input :tagline, label: "Tagline", hint: "Displayed next to your name. Ie. Developer" %>
+      <%= f.input :bio, label: "Bio", hint: "Tell us about yourself!" %>
+      <%= f.input :email, required: true, label: "Email Address" %>
+      <%= f.input :date_of_birth, required: true, 
+                                  start_year: (Date.today.year - 25),
+                                  end_year: Date.today.year,
+                                  label: "Date of Birth" %>
+
+      <%= f.input :password, required: true, 
+                             label: "New Password" %>
+
+      <%= f.submit "Update Profile" %>
+    <% end %>
+  </div>
+</div>

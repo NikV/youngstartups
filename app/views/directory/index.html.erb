@@ -11,16 +11,7 @@
     </section>
 
     <aside class="directory-sidebar">
-      <h3>Directory Members</h3>
-      <ul>
-        <% @users.accepted.each do |user| %>
-          <li>
-            <%= link_to user_path(user) do %>
-              <%= user.name.try(:titleize) %>
-            <% end %>
-          </li>
-        <% end %>
-      </ul>
+      <%= render 'members' %>
     </aside>
 
   </div>

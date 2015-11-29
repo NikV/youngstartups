@@ -58,7 +58,7 @@ nav {
 
 }
 
-.nav--has-bottom { 
+.nav--has-bottom, .heading--has-bottom { 
   margin-bottom: 3rem;
 }
 
@@ -94,6 +94,10 @@ input, textarea {
     border-color: $primary-color;
   }
 }
+span.hint { 
+  color: lighten($font-color, 20);
+  font-size: 1.3rem;
+}
 form { 
   margin-bottom: 3rem;
 }
@@ -103,6 +107,7 @@ input[type='submit']{
   background-color: $primary-color;
   color: white;
   padding: 1.5rem;
+  cursor: pointer;
 }
 
 #header {
@@ -111,6 +116,29 @@ input[type='submit']{
   color: white;
   h1, h2, h3, p { color: white; } 
   padding: 3rem 0;
+  p { 
+    max-width: 80rem;
+    padding-left: 11rem;
+  }
+}
+
+.heading--button { 
+  float: right;
+  text-decoration:none;
+  border-radius: 3px;
+  background: white;
+  color: $primary-color;
+  padding: 1.5rem 3rem;
+  margin-top: -1rem;
+  &:hover {
+    color: darken($primary-color, 10);
+  }
+}
+
+.heading--image {
+  float: left; 
+  margin-right: 3rem;
+  border-radius: 50px;
 }
 
 aside.sidebar {
