@@ -11,6 +11,7 @@ Rails.application.routes.draw do
   # Require Sign In
   resources :directory, only: [:index]
   resources :users, except: [:destroy], path: "members" # Except, new & create
+  resources :projects
 
   namespace :admin do
     resources :users, only: [:index] do

@@ -1,5 +1,13 @@
-<h1>New Project</h1>
+<% content_for(:heading_classes){ 'nav--has-bottom' } %>
+<% content_for :heading do %>
+  <h1>New Project</h1>
+<% end %>
 
-<%= render 'form' %>
 
-<%= link_to 'Back', projects_path %>
+<div class="wrapper">
+  <div class="base-half base-half--centered">
+
+    <%= render 'form' %>
+
+  </div>
+</div>

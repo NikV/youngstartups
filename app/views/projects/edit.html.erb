@@ -1,6 +1,17 @@
-<h1>Editing Project</h1>
+<% content_for(:heading_classes){ 'nav--has-bottom' } %>
+<% content_for :heading do %>
 
-<%= render 'form' %>
+  <% if current_user == @project.user %>
+    <%= link_to "Delete Project", project_path(@project), method: "DELETE", class: 'heading--button heading--button--destroy' %>
+  <% end %>
 
-<%= link_to 'Show', @project %> |
-<%= link_to 'Back', projects_path %>
+  <h1>Editing Project</h1>
+<% end %>
+
+<div class="wrapper">
+  <div class="base-half base-half--centered">
+
+    <%= render 'form' %>
+
+  </div>
+</div>

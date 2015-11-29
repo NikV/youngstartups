@@ -1,17 +1,6 @@
-<%= form_for(@project) do |f| %>
-  <% if @project.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@project.errors.count, "error") %> prohibited this project from being saved:</h2>
-
-      <ul>
-      <% @project.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
-      <% end %>
-      </ul>
-    </div>
-  <% end %>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
+<%= simple_form_for(@project) do |f| %>
+  <%= f.input :name %>
+  <%= f.input :description, hint: "What does your project do?" %>
+  <%= f.input :url, hint: "Link to the project (if there is one). Ensure full url ie. https://" %>
+  <%= f.submit %>
 <% end %>
