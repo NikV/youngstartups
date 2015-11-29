@@ -16,5 +16,12 @@
 
 .directory-sidebar {
   @include span(4 of 12);
-  h1, h2, h3, h4, ul, li, p, a { color: white; }
+  h1, h2, h3, h4, ul, li, p, a, a:visited { color: white; }
+  a, a:visited, a:hover { text-decoration: none; }
+  a:hover { font-weight: bold; color: white; }
+  
+  ul { margin: 0; padding: 0; } 
+  li { 
+    list-style: none;
+  }
 }

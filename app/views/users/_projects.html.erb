@@ -1,0 +1,11 @@
+<% if @user.projects.present? %>
+  <ul>
+    <% @user.projects.each do |project| %>
+      <li>
+        <%= project.name.try(:titleize) %>
+      </li>
+    <% end %>
+  </ul>
+<% else %>
+  <p><%= @user.name.try(:titleize) %> currently has no projects</p>
+<% end %>

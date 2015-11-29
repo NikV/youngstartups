@@ -1,1 +1,21 @@
-<h1><%= @user.name %></h1>
+<% content_for(:body_classes){ 'body--directory' } %>
+
+<% content_for :heading do %>
+  <h1><%= @user.name.try(:titleize) %><small><%= @user.tagline %></small></h1>
+  <%= simple_format(@user.bio) if @user.bio.present? %>
+<% end %>
+
+<div class="directory">
+  <div class="wrapper">
+
+    <section class="directory-main">
+      <h2>The Latest From <%= @user.name.try(:titleize) %></h2>
+    </section>
+
+    <aside class="directory-sidebar">
+      <h3><%= @user.name.try(:titleize) %>'s Projects</h3>
+      <%= render 'projects' %>
+    </aside>
+
+  </div>
+</div>
