@@ -12,3 +12,88 @@ body {
   font-family: 'Open Sans', sans-serif;
   background-color: $background-color;
 }
+
+h1, h2, h3 {
+  font-weight: 300;
+  color: $primary-color;
+}
+
+.wrapper {
+  @include container();
+  max-width: $desktops;
+}
+
+nav {
+  overflow: hidden;
+  background: white;
+  margin: 0;
+  padding: 0;
+
+  h1 { 
+    float: left; 
+    margin: 2rem 0 1rem 0;
+  } 
+
+  ul { 
+    float: right; 
+    li { 
+      float: left;
+      list-style: none;
+      display: inline-block;
+      padding: 1rem 2rem;
+      margin-top: 1.5rem;
+    } 
+    a { 
+      color: $primary-color;
+      text-decoration: none;
+    }
+  } 
+
+}
+
+.nav--has-bottom { 
+  margin-bottom: 3rem;
+}
+
+.base-half {
+  @include span(6);
+  background-color: white;
+  margin-bottom: 4rem;
+}
+
+.base-half--centered {
+  @include pad(2rem 4rem 3rem 4rem);
+  @include push(3);
+}
+
+label { 
+  display: block;
+  margin-top: 2rem;
+  color: $font-color;
+  margin-bottom: 0.5rem;
+}
+input, textarea { 
+  width: 100%;
+  color: $font-color;
+  min-height: 3rem;
+  font-size: 1.5rem;
+  border-width: 1px;
+  border-style: solid;
+  border-color: $background-color;
+  box-shadow:none;
+  &:focus { 
+    box-shadow: none;
+    outline: none;
+    border-color: $primary-color;
+  }
+}
+form { 
+  margin-bottom: 3rem;
+}
+input[type='submit']{
+  margin-top: 1.5rem;
+  border: none;
+  background-color: $primary-color;
+  color: white;
+  padding: 1.5rem;
+}

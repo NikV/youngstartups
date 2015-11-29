@@ -1,21 +1,26 @@
-<h1>Request Invite</h1>
+<% content_for(:nav_classes){ 'nav--has-bottom' } %>
 
-<%= simple_form_for @user do |f| %>
-  <%= f.input :name, required: true, label: "Name" %>
-  <%= f.input :email, required: true, label: "Email Address" %>
-  <%= f.input :date_of_birth, required: true, 
-                              start_year: (Date.today.year - 25),
-                              end_year: Date.today.year,
-                              label: "Date of Birth" %>
-  <%= f.input :will_contribute, required: true, 
-                              label: "What can you contribute to the community?" %>
-  <%= f.input :looking_for, required: true, 
-                              label: "What are you looking for from the community?" %>
-  <%= f.input :referred_from, required: true, 
-                              label: "Where did you hear about us?" %>
-  <%= f.input :password, required: true, 
-                              label: "Password" %>
+<div class="wrapper">
+  <div class="base-half base-half--centered">
+    <h1>Request Invite</h1>
 
-  <%= f.submit "Request Invite" %>
-<% end %>
+    <%= simple_form_for @user do |f| %>
+      <%= f.input :name, required: true, label: "Name" %>
+      <%= f.input :email, required: true, label: "Email Address" %>
+      <%= f.input :date_of_birth, required: true, 
+                                  start_year: (Date.today.year - 25),
+                                  end_year: Date.today.year,
+                                  label: "Date of Birth" %>
+      <%= f.input :will_contribute, required: true, 
+                                  label: "What can you contribute to the community?" %>
+      <%= f.input :looking_for, required: true, 
+                                  label: "What are you looking for from the community?" %>
+      <%= f.input :referred_from, required: true, 
+                                  label: "Where did you hear about us?" %>
+      <%= f.input :password, required: true, 
+                                  label: "Password" %>
 
+      <%= f.submit "Request Invite" %>
+    <% end %>
+  </div>
+</div>

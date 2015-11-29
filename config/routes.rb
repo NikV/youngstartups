@@ -5,9 +5,11 @@ Rails.application.routes.draw do
   delete '/logout', to: 'sessions#destroy'
   
   root 'pages#homepage'
+  get '/showcase', to: 'pages#showcase'
+  get '/podcast', to: 'pages#podcast'
 
+  # Require Sign In
   resources :directory, only: [:index]
-
-  resources :users, except: [:destroy]
+  resources :users, except: [:destroy] # Except, new & create
 
 end

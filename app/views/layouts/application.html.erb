@@ -8,6 +8,22 @@
 </head>
 <body>
 
+  <nav class="<%= content_for?(:nav_classes) ? yield(:nav_classes) : "" %>">
+    <div class="wrapper">
+      <h1>
+        <%= link_to root_path do %>
+          <%= image_tag "logo.png" %>
+        <% end %>
+      </h1>
+      <ul>
+        <li><%= link_to "Home", root_path %></li>
+        <li><%= link_to "Request Invite", new_user_path %></li>
+        <li><%= link_to "Showcase", showcase_path %></li>
+        <li><%= link_to "Podcast", podcast_path %></li>
+      </ul>
+    </div>
+  </nav>
+
 <%= render "shared/flashes" %>
 <%= yield %>
 

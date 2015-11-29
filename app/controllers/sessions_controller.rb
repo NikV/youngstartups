@@ -6,7 +6,7 @@ class SessionsController < ApplicationController
   def create
     if @user = login(params[:user][:email], params[:user][:password])
       flash[:notice] = "Login Successful"
-      redirect_to_directory_index_path
+      redirect_to directory_index_path
     else
       flash.now[:alert] = 'Login failed'
       render :new
