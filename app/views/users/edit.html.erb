@@ -7,6 +7,7 @@
 <div class="wrapper">
   <div class="base-half base-half--centered">
     <h1>Edit Profile</h1>
+    <p class="flash flash--notice">Avatars are powered by <%= link_to "Gravatar", "https://gravatar.com" %></p>
 
     <%= simple_form_for @user do |f| %>
       <%= f.input :name, required: true, label: "Name" %>

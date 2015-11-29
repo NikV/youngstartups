@@ -7,9 +7,15 @@
 .flash--notice { 
   background-color: $primary-color; 
   color: white;
+  a, a:visited, a:hover { 
+    color: white;
+  }
 }
 
 .flash--error { 
   background-color: #DF4848;
   color: white;
+  a, a:visited, a:hover { 
+    color: white;
+  }
 }
