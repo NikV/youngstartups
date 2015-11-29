@@ -14,7 +14,11 @@
 
     <section class="directory-main">
       <h2>The Latest From <%= @user.name.try(:titleize) %></h2>
-      <%= render 'directory/new_timeline_post' %>
+
+      <% if current_user == @user %>
+        <%= render 'directory/new_timeline_post' %>
+      <% end %>
+
       <%= render 'directory/timeline' %>
     </section>
 
