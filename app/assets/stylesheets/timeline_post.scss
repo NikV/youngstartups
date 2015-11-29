@@ -1,0 +1,50 @@
+.timeline-post {
+  overflow: hidden;
+  padding-bottom: 3rem;
+
+  small { 
+    clear: both;
+    text-align: right;
+    display: block;
+    margin-top: 0.8rem;
+    color: darken($background-color, 30); 
+  }
+}
+
+.timeline-post--new-post {
+  .timeline-post__content { @include span(7 of 7); @include pad(3rem) } //override
+  form { margin-bottom: 0; }
+  textarea {
+    padding: 2rem;
+  }
+  input[type='submit']{ 
+    margin-bottom: 0;
+  }
+}
+
+.timeline-post__content { 
+  @include span(6 of 7);
+  padding: 3rem 3rem;
+  background: white;
+  margin-bottom: 1rem;
+  border-radius: 2px;
+}
+
+.timeline-post__user { 
+  @include span(1 of 7);
+  position: relative;
+  img { 
+    border-radius: 4rem; 
+    position: absolute;
+    z-index: 2;
+    margin-top: 1rem; margin-left: 1.5rem; }
+  &:before {
+    content: "";
+    width: 0.5rem;
+    left: 5.2rem;
+    background-color: $primary-color;
+    height: 3000rem;
+    position: absolute;
+    z-index: 1;
+  }
+}

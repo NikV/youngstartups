@@ -9,6 +9,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'sorcery'
 gem 'simple_form'
 gem 'friendly_id', '~> 5.1.0'
+gem 'acts-as-taggable-on', '~> 3.4'
 
 gem 'susy'
 gem 'breakpoint'

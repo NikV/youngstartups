@@ -1,0 +1,8 @@
+<div class="timeline-post timeline-post--new-post">
+  <div class="timeline-post__content">
+    <%= simple_form_for @new_timeline_post do |f| %>
+      <%= f.input :content, label: false, placeholder: "What's on your mind? What have you been working on?" %>
+      <%= f.submit "Post" %>
+    <% end %>
+  </div>
+</div>

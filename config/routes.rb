@@ -12,6 +12,7 @@ Rails.application.routes.draw do
   resources :directory, only: [:index]
   resources :users, except: [:destroy], path: "members" # Except, new & create
   resources :projects
+  resources :timeline_posts, except: [:edit, :update]
 
   namespace :admin do
     resources :users, only: [:index] do
