@@ -22,6 +22,6 @@ private
   def permitted_params
     params.require(:user).permit(:email, :password, :date_of_birth, 
                                  :will_contribute, :looking_for, :referred_from, 
-                                 :bio, :tagline)
+                                 :bio, :tagline, :name)
   end
 end

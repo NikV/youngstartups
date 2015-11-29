@@ -1,2 +1,10 @@
-<h1>Directory#index</h1>
-<p>Find me in app/views/directory/index.html.erb</p>
+<% content_for :heading do %>
+  <h1>The Directory</h1>
+<% end %>
+
+
+<ul>
+  <% @users.each do |user| %>
+    <li><%= user.name %></li>
+  <% end %>
+</ul>

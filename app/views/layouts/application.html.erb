@@ -33,6 +33,14 @@
     </div>
   </nav>
 
+  <% if content_for?(:heading) %>
+    <header id="header">
+      <div class="wrapper">
+        <%= yield(:heading) %>
+      </div>
+    </header>
+  <% end %>
+
 <%= render "shared/flashes" %>
 <%= yield %>
 
