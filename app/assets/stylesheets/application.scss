@@ -1,6 +1,7 @@
 @import "variables";
 @import "susy";
 @import "breakpoint";
+@import "flashes";
 
 html, body { height: 100%; } 
 html { font-size: 62.5%; box-sizing: border-box; } 
@@ -15,6 +16,10 @@ body {
 
 h1, h2, h3 {
   font-weight: 300;
+  color: $primary-color;
+}
+
+a, a:visited, a:hover { 
   color: $primary-color;
 }
 

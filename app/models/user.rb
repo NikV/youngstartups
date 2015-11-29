@@ -4,4 +4,7 @@ class User < ActiveRecord::Base
 
   has_many :projects
   authenticates_with_sorcery!
+
+  before_save { |user| user.email = user.email.downcase }
+
 end

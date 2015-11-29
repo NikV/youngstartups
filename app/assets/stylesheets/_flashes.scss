@@ -1,0 +1,15 @@
+.flash {
+  margin-top: 3rem;
+  padding: 1rem 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.flash--notice { 
+  background-color: $primary-color; 
+  color: white;
+}
+
+.flash--error { 
+  background-color: #DF4848;
+  color: white;
+}
