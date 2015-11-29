@@ -10,8 +10,11 @@ class SessionsController < ApplicationController
         login(params[:user][:email], params[:user][:password])
         flash[:notice] = "Login Successful"
         redirect_to directory_index_path
-      else
+      elsif @user.valid_password?(params[:user][:password])
         flash[:notice] = "You're application is pending approval"
+        redirect_to root_path
+      else
+        flash[:notice] = "You're username or password is incorrect"
         redirect_to root_path
       end
     else
