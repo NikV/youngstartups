@@ -17,9 +17,18 @@
       </h1>
       <ul>
         <li><%= link_to "Home", root_path %></li>
-        <li><%= link_to "Request Invite", new_user_path %></li>
+        <% if current_user.present? %>
+          <li><%= link_to "Directory", directory_index_path %></li>
+        <% else %>
+          <li><%= link_to "Request Invite", new_user_path %></li>
+        <% end %>
         <li><%= link_to "Showcase", showcase_path %></li>
         <li><%= link_to "Podcast", podcast_path %></li>
+        <% if current_user.present? %>
+          <li><%= link_to "Logout", logout_path, method: "DELETE" %></li>
+        <% else %>
+          <li><%= link_to "Sign in", login_path %></li>
+        <% end %>
       </ul>
     </div>
   </nav>
