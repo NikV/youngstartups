@@ -89,6 +89,8 @@ input, textarea {
   border-style: solid;
   border-color: $background-color;
   box-shadow:none;
+  padding-left: 5px;
+
   &:focus { 
     box-shadow: none;
     outline: none;
