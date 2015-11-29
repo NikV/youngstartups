@@ -1,7 +1,15 @@
-<h1>Sign in</h1>
+<% content_for(:nav_classes){ 'nav--has-bottom' } %>
 
-<%= simple_form_for :user, url: login_path, method: "POST" do |f| %>
-  <%= f.input :email %>
-  <%= f.input :password %>
-  <%= f.submit "Sign in" %>
-<% end %>
+<div class="wrapper">
+  <div class="base-half base-half--centered">
+
+    <h1>Sign in</h1>
+
+    <%= simple_form_for :user, url: login_path, method: "POST" do |f| %>
+      <%= f.input :email %>
+      <%= f.input :password %>
+      <%= f.submit "Sign in" %>
+    <% end %>
+
+  </div>
+</div>
