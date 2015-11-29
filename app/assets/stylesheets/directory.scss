@@ -1,3 +1,20 @@
-// Place all the styles related to the directory controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+// This worked better than expected 8-)
+.body--directory {
+  background: linear-gradient(to right, 
+                              rgba(234,235,237,1) 0%, 
+                              rgba(234,235,237,1) 62%, 
+                              rgba(0,157,144,1) 63%, 
+                              rgba(0,157,144,1) 100%);
+}
+
+.directory {
+}
+
+.directory-main {
+  @include span(8 of 12);
+}
+
+.directory-sidebar {
+  @include span(4 of 12);
+  h1, h2, h3, h4, ul, li, p, a { color: white; }
+}

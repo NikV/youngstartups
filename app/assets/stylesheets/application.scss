@@ -2,6 +2,7 @@
 @import "susy";
 @import "breakpoint";
 @import "flashes";
+@import "directory";
 
 html, body { height: 100%; } 
 html { font-size: 62.5%; box-sizing: border-box; } 
@@ -110,4 +111,7 @@ input[type='submit']{
   color: white;
   h1, h2, h3, p { color: white; } 
   padding: 3rem 0;
+}
+
+aside.sidebar {
 }

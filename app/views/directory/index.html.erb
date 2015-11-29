@@ -1,10 +1,23 @@
+<% content_for(:body_classes){ 'body--directory' } %>
 <% content_for :heading do %>
   <h1>The Directory</h1>
 <% end %>
 
+<div class="directory">
+  <div class="wrapper">
 
-<ul>
-  <% @users.each do |user| %>
-    <li><%= user.name %></li>
-  <% end %>
-</ul>
+    <section class="directory-main">
+      <h2>Timeline to go here</h2>
+    </section>
+
+    <aside class="directory-sidebar">
+      <h3>Directory Members</h3>
+      <ul>
+        <% @users.accepted.each do |user| %>
+          <li><%= user.name %></li>
+        <% end %>
+      </ul>
+    </aside>
+
+  </div>
+</div>
