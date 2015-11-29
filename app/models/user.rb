@@ -7,4 +7,7 @@ class User < ActiveRecord::Base
 
   before_save { |user| user.email = user.email.downcase }
 
+  scope :pending_acceptance, -> { where(accepted: false) }
+  scope :accepted, -> { where(accepted: true) }
+
 end

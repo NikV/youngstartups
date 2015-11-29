@@ -25,6 +25,9 @@
         <li><%= link_to "Showcase", showcase_path %></li>
         <li><%= link_to "Podcast", podcast_path %></li>
         <% if current_user.present? %>
+          <% if current_user.admin? %>
+            <li><%= link_to "Admin", admin_users_path %></li>
+          <% end %>
           <li><%= link_to "Logout", logout_path, method: "DELETE" %></li>
         <% else %>
           <li><%= link_to "Sign in", login_path %></li>

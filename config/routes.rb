@@ -12,4 +12,12 @@ Rails.application.routes.draw do
   resources :directory, only: [:index]
   resources :users, except: [:destroy], path: "members" # Except, new & create
 
+  namespace :admin do
+    resources :users, only: [:index] do
+      member do
+        get :accept_invite
+      end
+    end
+  end
+
 end

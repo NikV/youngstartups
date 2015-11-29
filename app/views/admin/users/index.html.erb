@@ -1,0 +1,18 @@
+<% content_for :heading do %>
+  <h1>Young Startups Admin</h1>
+<% end %>
+
+<div class="wrapper">
+  <h2>Users Pending Acceptance</h2>
+  <% if @users.pending_acceptance.present? %>
+    <ul>
+      <% @users.pending_acceptance.each do |user| %>
+        <li><%= link_to user.name, user_path(user.id) %> - 
+          <%= link_to "Accept User", accept_invite_admin_user_path(user.id) %></li>
+      <% end %>
+    </ul>
+  <% else %>
+    <p>No Users Pending Acceptance. <br />
+       Note: Currently this does not notify the user by email.</p>
+  <% end %>
+</div>
