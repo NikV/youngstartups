@@ -1,4 +1,5 @@
 source 'https://rubygems.org'
+ruby '2.2.2'
 
 gem 'rails', '4.2.4'
 gem 'pg'
@@ -34,4 +35,8 @@ group :test do
   gem 'vcr'
   gem 'webmock'
   gem 'capybara'
+end
+
+group :production do
+  gem 'rails_12factor'
 end
