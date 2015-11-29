@@ -14,6 +14,8 @@
 
     <section class="directory-main">
       <h2>The Latest From <%= @user.name.try(:titleize) %></h2>
+      <%= render 'directory/new_timeline_post' %>
+      <%= render 'directory/timeline' %>
     </section>
 
     <aside class="directory-sidebar">

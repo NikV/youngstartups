@@ -9,20 +9,7 @@
     <section class="directory-main">
       <h2>The Latest From Young Startups</h2>
       <%= render 'new_timeline_post' %>
-
-      <% @timeline_posts.each do |post| %>
-        <div class="timeline-post">
-          <div class="timeline-post__user">
-            &nbsp;
-            <%= image_tag gravatar(post.user.email, 50) %>
-          </div>
-          <div class="timeline-post__content">
-            <%= post.content %>
-          </div>
-          <small><%= time_ago_in_words(post.created_at) %> ago</small>
-        </div>
-      <% end %>
-
+      <%= render 'timeline' %>
     </section>
 
     <aside class="directory-sidebar">

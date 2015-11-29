@@ -30,6 +30,8 @@ class UsersController < ApplicationController
 
   def show
     @user = User.friendly.find(params[:id])
+    @timeline_posts = @user.timeline_posts.where.not(created_at: nil)
+    @new_timeline_post = @user.timeline_posts.build
   end
 
 private

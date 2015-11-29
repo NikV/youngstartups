@@ -48,3 +48,18 @@
     z-index: 1;
   }
 }
+
+.timeline-post--first {
+  .timeline-post__user { 
+    &:after {
+      content: "";
+      width: 0.5rem;
+      left: 5.2rem;
+      background-color: $background-color;
+      top: 0;
+      height: 4rem;
+      position: absolute;
+      z-index: 1;
+    }
+  }
+}

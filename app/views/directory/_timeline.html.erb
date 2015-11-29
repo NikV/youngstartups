@@ -1,0 +1,12 @@
+<% @timeline_posts.each_with_index do |post, index| %>
+  <div class="timeline-post <%= (index == 0) ? "timeline-post--first" : "" %>">
+    <div class="timeline-post__user">
+      &nbsp;
+      <%= image_tag gravatar(post.user.email, 50) %>
+    </div>
+    <div class="timeline-post__content">
+      <%= post.content %>
+    </div>
+    <small><%= time_ago_in_words(post.created_at) %> ago</small>
+  </div>
+<% end %>
