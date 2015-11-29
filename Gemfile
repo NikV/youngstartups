@@ -10,6 +10,7 @@ gem 'sorcery'
 gem 'simple_form'
 gem 'friendly_id', '~> 5.1.0'
 gem 'acts-as-taggable-on', '~> 3.4'
+gem 'pundit'
 
 gem 'susy'
 gem 'breakpoint'

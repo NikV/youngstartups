@@ -2,6 +2,7 @@ class TimelinePostsController < ApplicationController
 
   def create
     @post = current_user.timeline_posts.build(permitted_params)
+    authorize @post
     if @post.save
       redirect_to directory_index_path
     else
@@ -12,6 +13,7 @@ class TimelinePostsController < ApplicationController
 
   def update
     @post = TimelinePost.find(params[:id])
+    authorize @post
   end
 
 private

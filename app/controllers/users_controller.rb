@@ -6,6 +6,7 @@ class UsersController < ApplicationController
   
   def edit
     @user = User.friendly.find(params[:id])
+    authorize @user
   end
 
   def create
@@ -20,6 +21,7 @@ class UsersController < ApplicationController
 
   def update
     @user = User.friendly.find(params[:id])
+    authorize @user
     if @user.update_attributes(permitted_params)
       flash[:notice] = "Your profile has been updated"
       redirect_to edit_user_path(@user)
