@@ -14,6 +14,7 @@
       <%= f.input :tagline, label: "Tagline", hint: "Displayed next to your name. Ie. Developer" %>
       <%= f.input :bio, label: "Bio", hint: "Tell us about yourself!" %>
       <%= f.input :email, required: true, label: "Email Address" %>
+      <%= f.input :slack_username, label: "Your Slack Username" %>
       <%= f.input :date_of_birth, required: true, 
                                   start_year: (Date.today.year - 25),
                                   end_year: Date.today.year,
