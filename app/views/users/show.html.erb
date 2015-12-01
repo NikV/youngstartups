@@ -9,7 +9,7 @@
   <%= simple_format(@user.bio) if @user.bio.present? %>
   <% if @user.slack_username %>
     <p>
-      @<%= @user.slack_username %> on Slack
+      <%= link_to "@#{@user.slack_username}", "https://youngstartups.slack.com/messages/@#{@user.slack_username}/", target: "_blank" %> on Slack
     </p>
   <% end %>
 <% end %>
